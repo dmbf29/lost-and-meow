@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Lost Pets</h1>
+  <div class="cards">
+    <% @pets.each do |pet| %>
+      <div class="card-product">
+        <img src="https://images.unsplash.com/photo-1612840021518-c3bdc90d09d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxyYW5kb218fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit" />
+        <div class="card-product-infos">
+          <h2><%= link_to pet.name, pet_path(pet) %></h2>
+          <p><%= pet.species %> - <%= pet.address %></p>
+          <p>Found <%= pet.found_days_ago %> days ago</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

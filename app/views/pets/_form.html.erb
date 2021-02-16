@@ -1,0 +1,11 @@
+<%= simple_form_for @pet do |f| %>
+  <%= f.input :name %>
+  <%= f.input :species, collection: Pet::SPECIES, include_blank: false %>
+  <%= f.input :found_on, html5: true %>
+  <%= f.input :address %>
+  <% if @pet.id %>
+    <%= f.submit 'Update', class: 'btn btn-info' %>
+  <% else %>
+    <%= f.submit 'Add', class: 'btn btn-info' %>
+  <% end %>
+<% end %>

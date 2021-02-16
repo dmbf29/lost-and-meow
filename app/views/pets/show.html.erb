@@ -1,0 +1,7 @@
+<div class="container">
+  <h1><%= @pet.name %></h1>
+  <p><%= @pet.address %></p>
+  <p><%= @pet.species %></p>
+  <p>Found <%= @pet.found_days_ago %> days ago</p>
+  <%= link_to "🐾", pets_path, class: 'btn'  %>
+</div>
