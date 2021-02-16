@@ -3,6 +3,7 @@ class Pet < ApplicationRecord
   # validations
   SPECIES = ['snail', 'kangaroo', 'monkey', 'dolphin', 'cat', 'dog']
   validates :name, presence: true
+  validates :found_on, presence: true
   validates :species, inclusion: { in: SPECIES }
 
   def found_days_ago
